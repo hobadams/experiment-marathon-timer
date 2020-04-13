@@ -1,6 +1,6 @@
 const initialState = {
   lap: 0,
-  total: 1440,
+  total: 1172,
   time: null,
   finish: false,
   start: false
