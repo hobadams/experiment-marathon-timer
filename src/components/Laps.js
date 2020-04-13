@@ -5,6 +5,8 @@ const addLap = () => ({ type: "ADD_LAP" });
 
 let timeout;
 
+const metresPerLap = 32;
+
 const Laps = ({ lap, total, start, dispatch }) => {
   document.body.onkeyup = function (e) {
     if (start) {
@@ -17,9 +19,12 @@ const Laps = ({ lap, total, start, dispatch }) => {
   };
 
   return (
-    <p style={{ fontSize: 120, margin: 30 }}>
-      {lap} / {total}
-    </p>
+    <>
+      <p style={{ fontSize: 120, margin: 30 }}>
+        {lap} / {total}
+      </p>
+      <p>{42 -((metresPerLap * lap) / 1000)} KM remaining</p>
+    </>
   );
 };
 
